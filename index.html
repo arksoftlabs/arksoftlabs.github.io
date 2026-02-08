@@ -1,135 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>ArkSoft Labs — Smart Utility Apps</title>
+  <meta charset="utf-8" />
+  <title>ArkSoft Labs — Easy Tasbeeh & Utility Apps for Android</title>
 
-  <!-- SEO -->
-  <meta name="description" content="ArkSoft Labs builds clean, lightweight utility apps including Islamic tools and productivity utilities for Android." />
-  <meta name="keywords" content="ArkSoft Labs, Android apps, Islamic apps, Tasbeeh Counter, utility apps" />
-  <meta name="author" content="ArkSoft Labs" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- META for SEO -->
+  <meta name="description" content="ArkSoft Labs builds clean Android apps including Easy Tasbeeh — a lightweight, privacy-focused digital tasbeeh counter. Download now on Google Play." />
+  <meta name="keywords" content="Easy Tasbeeh, Tasbeeh counter app, Zikr counter, Islamic apps, Android utility apps, ArkSoft Labs" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="ArkSoft Labs" />
-  <meta property="og:description" content="Clean, useful Android apps built with care." />
-  <meta property="og:type" content="website" />
+  <!-- Open Graph (social preview) -->
+  <meta property="og:title" content="Easy Tasbeeh – Digital Tasbeeh Counter by ArkSoft Labs" />
+  <meta property="og:description" content="Easy Tasbeeh is a lightweight Android tasbeeh and zikr counter app with clean UI and privacy-respecting design." />
+  <meta property="og:image" content="https://arksoftlabs.github.io/assets/images/easy-tasbeeh-og.png" />
   <meta property="og:url" content="https://arksoftlabs.github.io/" />
+  <meta property="og:type" content="website" />
 
   <style>
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
+      background: #0a1128;
+      color: #e2e8f0;
       line-height: 1.6;
-    }
-
-    header {
-      padding: 60px 20px;
       text-align: center;
-      background: linear-gradient(135deg, #020617, #0f172a);
     }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      letter-spacing: 1px;
+    .container { padding: 28px 16px; max-width: 900px; margin: auto; }
+    h1 { font-size: 2.3rem; margin: 10px 0 6px; }
+    p { font-size: 1rem; max-width: 720px; margin: 12px auto; color: #94a3b8; }
+    a.button {
+      display: inline-block;
+      padding: 12px 20px;
+      background: #38bdf8;
+      color: #0a1128;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      margin: 14px 6px;
     }
-
-    header p {
-      max-width: 600px;
-      margin: 0 auto;
-      color: #9ca3af;
+    a.button:hover {
+      background: #0ea5e9;
     }
-
-    section {
-      padding: 50px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    h2 {
-      color: #f9fafb;
-      margin-bottom: 10px;
-    }
-
+    section { margin-top: 24px; }
     .apps {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin: 32px auto;
     }
-
     .card {
-      background: #020617;
-      border: 1px solid #1e293b;
-      border-radius: 10px;
-      padding: 20px;
+      background: #112240;
+      border-radius: 14px;
+      border: 1px solid #1e2a44;
+      padding: 18px;
+      text-align: left;
     }
-
-    .card h3 {
-      margin-top: 0;
-      margin-bottom: 5px;
-    }
-
-    footer {
-      padding: 30px 20px;
-      text-align: center;
+    .card h3 { margin-top: 0; }
+    .card p { color: #a0aec0; font-size: 14px; }
+    .footer {
+      margin-top: 42px;
       font-size: 0.9rem;
-      color: #9ca3af;
-      border-top: 1px solid #1e293b;
+      color: #94a3b8;
     }
-
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
+    .footer a { color: #38bdf8; text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
   </style>
-</head>
 
+</head>
 <body>
 
-<header>
+<div class="container">
   <h1>ArkSoft Labs</h1>
-  <p>We build clean, focused Android utility apps — from Islamic tools to everyday productivity.</p>
-</header>
+  <p>We build simple, clean, and privacy-focused Android apps. Discover our apps below and download them on Google Play.</p>
 
-<section>
-  <h2>Our Apps</h2>
+  <section id="apps" class="apps">
 
-  <div class="apps">
+    <!-- EASY TASBEEH APP CARD -->
     <div class="card">
       <h3>Easy Tasbeeh</h3>
-      <p>A modern digital Tasbeeh counter with a clean, distraction-free design.</p>
-      <p><em>Available on Google Play</em></p>
+      <p>
+        A lightweight and easy-to-use digital tasbeeh counter for daily zikr. Customize counters, track progress, and enjoy an uncluttered experience.
+      </p>
+      <!-- BUTTON TO PLAY STORE -->
+      <a class="button" href="https://play.google.com/store/apps/details?id=com.arktech.easy_tasbeeh" target="_blank">
+        Download on Google Play
+      </a>
+      <p style="font-size:13px; color:#94a3b8; margin-top:8px;">
+        Privacy: <a href="privacy/easy-tasbeeh.html">Easy Tasbeeh Privacy Policy</a>
+      </p>
     </div>
 
+    <!-- FUTURE APP PLACEHOLDER -->
     <div class="card">
-      <h3>Upcoming Utilities</h3>
-      <p>Lightweight tools focused on privacy, performance, and simplicity.</p>
-      <p><em>More apps coming soon</em></p>
+      <h3>More Apps Coming</h3>
+      <p>
+        We’re building more productivity and utility-focused apps. Check back soon or contact us for early access previews.
+      </p>
     </div>
-  </div>
-</section>
 
-<section>
-  <h2>About ArkSoft Labs</h2>
-  <p>
-    ArkSoft Labs is an independent studio focused on building practical Android apps.
-    We believe in simple design, low resource usage, and long-term reliability.
-  </p>
-</section>
+  </section>
 
-<footer>
-  © 2026 ArkSoft Labs  
-  <br />
-  <a href="/app-ads.txt">app-ads.txt</a>
-</footer>
+  <section>
+    <p>
+      Visit our <a class="button" href="privacy.html">General Privacy Policy</a> or <a class="button" href="terms.html">Terms & Conditions</a>.
+    </p>
+  </section>
+
+  <footer class="footer">
+    © <span id="year"></span> ArkSoft Labs ·
+    <a href="app-ads.txt">app-ads.txt</a> ·
+    <a href="privacy.html">Privacy Policy</a> ·
+    <a href="terms.html">Terms</a>
+  </footer>
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
