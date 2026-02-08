@@ -2,310 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Easy Tasbeeh Counter (Dhikr & Zikr) — Download on Google Play</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Easy Tasbeeh is a lightweight digital tasbeeh counter for daily dhikr and zikr. Clean UI, customizable counters, vibration/sound feedback, and privacy-friendly design. Download on Google Play." />
-  <meta name="keywords" content="Easy Tasbeeh, tasbeeh counter, dhikr counter, zikr counter, digital tasbeeh, islamic app, muslim app, tasbeeh app android" />
-  <link rel="canonical" href="https://arksoftlabs.github.io/apps/easy-tasbeeh.html" />
+  <title>Easy Tasbeeh – Digital Tasbeeh Counter (Android) | ArkSoft Labs</title>
+  <meta name="description" content="Easy Tasbeeh is a lightweight digital tasbeeh counter for daily dhikr and zikr. Clean UI, customizable counters, offline use, and privacy-friendly design." />
+  <meta name="keywords" content="Easy Tasbeeh, tasbeeh counter, dhikr counter, zikr counter, Islamic app, Android tasbeeh" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Easy Tasbeeh Counter — Dhikr & Zikr" />
-  <meta property="og:description" content="A clean, lightweight digital tasbeeh counter for daily dhikr and zikr. Download on Google Play." />
-  <meta property="og:url" content="https://arksoftlabs.github.io/apps/easy-tasbeeh.html" />
+  <meta property="og:title" content="Easy Tasbeeh – Digital Tasbeeh Counter" />
+  <meta property="og:description" content="Lightweight tasbeeh counter for daily dhikr and zikr. Clean UI, offline use, privacy-friendly." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://arksoftlabs.com/apps/easy-tasbeeh.html" />
 
-  <style>
-    :root{
-      --bg:#0b0f17;
-      --card:#0f1624;
-      --text:#e8eefc;
-      --muted:#a7b3cc;
-      --line:#1c2a44;
-      --accent:#6ea8fe;
-      --good:#4ade80;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: radial-gradient(1100px 700px at 15% -10%, #1b2a4a 0%, transparent 62%),
-                  radial-gradient(900px 600px at 95% 10%, #1a3a2a 0%, transparent 58%),
-                  var(--bg);
-      color:var(--text);
-      line-height: 1.65;
-    }
-    a{color:inherit; text-decoration:none}
-    .wrap{max-width:980px; margin:0 auto; padding:26px 16px 60px;}
-    .top{
-      display:flex; align-items:center; justify-content:space-between; gap:12px;
-      padding:14px 16px; border:1px solid var(--line);
-      border-radius:16px; background:rgba(15,22,36,.75);
-      backdrop-filter: blur(8px);
-    }
-    .brand{display:flex; align-items:center; gap:12px;}
-    .logo{
-      width:40px; height:40px; border-radius:12px;
-      background: linear-gradient(135deg, #6ea8fe, #4ade80);
-      box-shadow: 0 10px 30px rgba(110,168,254,.22);
-    }
-    .brand b{display:block; font-size:14px; letter-spacing:.2px}
-    .brand span{display:block; font-size:12px; color:var(--muted)}
-    .nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
-    .pill{
-      padding:9px 12px; border:1px solid var(--line); border-radius:999px;
-      background:rgba(15,22,36,.55);
-      font-size:13px; color:var(--muted);
-    }
-    .pill:hover{border-color:#2a3d66; color:var(--text)}
-    .hero{
-      margin-top:22px;
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:14px;
-      align-items:stretch;
-    }
-    @media (max-width: 860px){
-      .hero{grid-template-columns: 1fr;}
-    }
-    .panel{
-      border:1px solid var(--line);
-      border-radius:18px;
-      background:rgba(15,22,36,.75);
-      padding:18px;
-    }
-    h1{margin:0 0 8px; font-size:34px; line-height:1.1}
-    .sub{color:var(--muted); margin:0 0 14px; font-size:15px}
-    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      padding:12px 14px; border-radius:14px;
-      border:1px solid var(--line);
-      background:rgba(11,15,23,.35);
-      color:var(--text);
-      font-weight:700; font-size:14px;
-    }
-    .btn.primary{
-      background: linear-gradient(135deg, rgba(110,168,254,.95), rgba(74,222,128,.9));
-      border-color: transparent;
-      color:#071018;
-    }
-    .btn:hover{transform: translateY(-1px)}
-    .meta{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:10px;
-      margin-top:10px;
-    }
-    @media (max-width: 520px){ .meta{grid-template-columns: 1fr;} }
-    .chip{
-      border:1px solid var(--line);
-      border-radius:14px;
-      padding:10px 12px;
-      background:rgba(11,15,23,.25);
-      color:var(--muted);
-      font-size:13px;
-    }
-    .chip b{color:var(--text)}
-    .grid{
-      margin-top:14px;
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap:14px;
-    }
-    .card{
-      grid-column: span 6;
-      border:1px solid var(--line);
-      background:rgba(15,22,36,.75);
-      border-radius:18px;
-      padding:16px;
-    }
-    @media (max-width: 860px){ .card{grid-column: span 12;} }
-    h2{margin:0 0 10px; font-size:18px}
-    ul{margin:0; padding-left:18px; color:var(--muted)}
-    li{margin:6px 0}
-    .muted{color:var(--muted)}
-    .footer{
-      margin-top:22px;
-      padding-top:18px;
-      border-top:1px solid var(--line);
-      color:var(--muted);
-      font-size:13px;
-      display:flex; gap:10px; flex-wrap:wrap; justify-content:space-between;
-    }
-    .footer a{color:var(--muted); text-decoration:underline; text-underline-offset: 3px;}
-    .note{
-      margin-top:10px;
-      font-size:12px;
-      color:var(--muted);
-    }
-    .shots{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:10px;
-      margin-top:10px;
-    }
-    @media (max-width: 700px){ .shots{grid-template-columns: 1fr;} }
-    .shot{
-      border:1px dashed #2a3d66;
-      border-radius:16px;
-      padding:14px;
-      background:rgba(11,15,23,.25);
-      color:var(--muted);
-      font-size:13px;
-      min-height:110px;
-      display:flex; align-items:center; justify-content:center; text-align:center;
-    }
-  </style>
+  <link rel="canonical" href="https://arksoftlabs.com/apps/easy-tasbeeh.html" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
 
-  <!-- ✅ App structured data (JSON-LD) -->
+  <!-- App schema -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "MobileApplication",
-    "name": "Easy Tasbeeh",
-    "operatingSystem": "Android",
-    "applicationCategory": "LifestyleApplication",
-    "applicationSubCategory": "Utility",
-    "description": "Easy Tasbeeh is a lightweight digital tasbeeh counter for daily dhikr and zikr with a clean UI and privacy-friendly design.",
-    "author": {
-      "@type": "Organization",
-      "name": "ArkSoft Labs",
-      "url": "https://arksoftlabs.github.io/"
-    },
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "downloadUrl": "https://play.google.com/store/apps/details?id=com.arktech.easy_tasbeeh",
-    "url": "https://arksoftlabs.github.io/apps/easy-tasbeeh.html",
-    "privacyPolicy": "https://arksoftlabs.github.io/privacy/easy-tasbeeh.html"
+    "@context":"https://schema.org",
+    "@type":"MobileApplication",
+    "name":"Easy Tasbeeh",
+    "operatingSystem":"Android",
+    "applicationCategory":"UtilitiesApplication",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+    "publisher":{"@type":"Organization","name":"ArkSoft Labs","url":"https://arksoftlabs.com"},
+    "downloadUrl":"https://play.google.com/store/apps/details?id=com.arktech.easy_tasbeeh"
   }
   </script>
 </head>
 
 <body>
-  <div class="wrap">
-    <header class="top">
-      <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <div>
-          <b>ArkSoft Labs</b>
-          <span>Easy Tasbeeh • Dhikr & Zikr Counter</span>
-        </div>
-      </div>
-      <nav class="nav">
-        <a class="pill" href="/">Home</a>
-        <a class="pill" href="https://play.google.com/store/apps/details?id=com.arktech.easy_tasbeeh" target="_blank" rel="noopener">Google Play</a>
-        <a class="pill" href="/privacy/easy-tasbeeh.html">Privacy</a>
-        <a class="pill" href="/terms/easy-tasbeeh.html">Terms</a>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/"><div class="brand-badge">A</div><div><div class="brand-name">ArkSoft Labs</div><div class="brand-sub">Privacy-focused Android apps</div></div></a>
+      <nav class="nav-links">
+        <a href="/apps/">Apps</a><a href="/privacy/">Privacy</a><a href="/terms.html">Terms</a><a href="/contact.html">Contact</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <section class="hero">
-      <div class="panel">
-        <h1>Easy Tasbeeh Counter</h1>
-        <p class="sub">
-          A clean, lightweight digital tasbeeh counter for daily <strong>dhikr</strong> and <strong>zikr</strong>.
-          Simple UI, customizable counters, and privacy-friendly design.
-        </p>
+  <main class="page">
+    <div class="container">
+      <h1>Easy Tasbeeh</h1>
+      <p>A lightweight digital tasbeeh counter for daily dhikr and zikr — clean UI, offline-friendly, and privacy-focused.</p>
 
-        <div class="ctaRow">
-          <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.arktech.easy_tasbeeh" target="_blank" rel="noopener">
-            Download on Google Play
-          </a>
-          <a class="btn" href="/privacy/easy-tasbeeh.html">Privacy Policy</a>
-          <a class="btn" href="/terms/easy-tasbeeh.html">Terms</a>
+      <div class="kv">
+        <div class="card pad">
+          <h2>Download</h2>
+          <p>Get the official version from Google Play.</p>
+          <div class="cta-row">
+            <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.arktech.easy_tasbeeh">Open on Google Play</a>
+            <a class="btn" href="/privacy/easy-tasbeeh.html">Privacy Policy</a>
+          </div>
+          <p class="small" style="margin-top:12px">Package: <code>com.arktech.easy_tasbeeh</code></p>
         </div>
 
-        <div class="meta">
-          <div class="chip"><b>Platform:</b> Android</div>
-          <div class="chip"><b>Category:</b> Utility / Lifestyle</div>
-          <div class="chip"><b>Keywords:</b> tasbeeh counter, dhikr counter, zikr counter</div>
-          <div class="chip"><b>Developer:</b> ArkSoft Labs</div>
-        </div>
-
-        <p class="note">
-          Tip: For better Google ranking, add 3–5 screenshots later. I left placeholders below.
-        </p>
-      </div>
-
-      <div class="panel">
-        <h2>Why Easy Tasbeeh?</h2>
-        <ul>
-          <li>Fast, simple, distraction-free counting</li>
-          <li>Custom counters and lap targets</li>
-          <li>Optional sound & vibration feedback</li>
-          <li>Favorites / quick selection</li>
-          <li>Designed to be lightweight and easy to use</li>
-        </ul>
-
-        <div class="shots" aria-label="Screenshot placeholders">
-          <div class="shot">Screenshot 1<br/>(add later)</div>
-          <div class="shot">Screenshot 2<br/>(add later)</div>
-          <div class="shot">Screenshot 3<br/>(add later)</div>
+        <div class="card pad">
+          <h2>Highlights</h2>
+          <ul>
+            <li>Clean and calming UI for daily use</li>
+            <li>Customizable counters and rounds</li>
+            <li>Works offline</li>
+            <li>Privacy-friendly design</li>
+            <li>Lightweight performance</li>
+          </ul>
         </div>
       </div>
-    </section>
 
-    <section class="grid">
-      <article class="card">
-        <h2>Features</h2>
-        <ul>
-          <li>Digital tasbeeh counting with clean UI</li>
-          <li>Track progress per counter</li>
-          <li>Create, edit, and manage multiple counters</li>
-          <li>Favorites for quick access</li>
-          <li>Optional haptics/sound</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h2>Privacy</h2>
-        <p class="muted">
-          Easy Tasbeeh is designed with a privacy-friendly approach. For details about ads/analytics handling, read:
-        </p>
-        <p>
-          <a class="pill" href="/privacy/easy-tasbeeh.html">Easy Tasbeeh Privacy Policy</a>
-        </p>
-      </article>
-
-      <article class="card">
+      <div class="card pad" style="margin-top:14px">
         <h2>Support</h2>
-        <p class="muted">
-          If you need help or want to report an issue, contact ArkSoft Labs.
-        </p>
-        <p>
-          <a class="pill" href="mailto:arksoftlabs@gmail.com">Email support</a>
-        </p>
-        <p class="note">Replace this email with your official support email if different.</p>
-      </article>
-
-      <article class="card">
-        <h2>Download</h2>
-        <p class="muted">Get the latest version on Google Play:</p>
-        <p>
-          <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.arktech.easy_tasbeeh" target="_blank" rel="noopener">
-            Open Google Play Listing
-          </a>
-        </p>
-      </article>
-    </section>
-
-    <footer class="footer">
-      <div>© <span id="y"></span> ArkSoft Labs</div>
-      <div>
-        <a href="/">Home</a> ·
-        <a href="/app-ads.txt">app-ads.txt</a> ·
-        <a href="/privacy/easy-tasbeeh.html">Privacy</a> ·
-        <a href="/terms/easy-tasbeeh.html">Terms</a>
+        <p>If you need help, feedback, or feature requests: use our contact page.</p>
+        <div class="cta-row"><a class="btn" href="/contact.html">Contact ArkSoft Labs</a></div>
       </div>
-    </footer>
-  </div>
+    </div>
+  </main>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <footer class="footer"><div class="container">© <span id="y"></span> ArkSoft Labs</div><script>document.getElementById('y').textContent=new Date().getFullYear();</script></footer>
 </body>
 </html>
